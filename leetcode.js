@@ -1,4 +1,4 @@
-// 1108. Defanging an IP Address
+// 1108. Defanging an IP Address (easy)
 var defangIPaddr = function(address) {
     let newAddy = address.split('')
     let newArr = []
@@ -9,7 +9,7 @@ var defangIPaddr = function(address) {
 }
 
 
-// 1480. Running Sum of 1d Array
+// 1480. Running Sum of 1d Array (easy)
 var defangIPaddr = function(address) {
     let newAddy = address.split('')
     let newArr = []
