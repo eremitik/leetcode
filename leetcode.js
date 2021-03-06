@@ -18,3 +18,13 @@ var defangIPaddr = function(address) {
     }
     return newArr.join('')
 }
+
+// 1431. Kids With the Greatest Number of Candies (easy)
+var kidsWithCandies = function(candies, extraCandies) {
+    let newArr = []
+    let maxCandies = Math.max(...candies)
+    for (let i=0; i<candies.length; i++){
+        newArr.push((candies[i]+extraCandies) >= maxCandies )
+    }
+    return newArr
+}
