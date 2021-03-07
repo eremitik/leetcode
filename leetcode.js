@@ -9,6 +9,7 @@ var defangIPaddr = function(address) {
 }
 
 
+
 // 1480. Running Sum of 1d Array (easy)
 var defangIPaddr = function(address) {
     let newAddy = address.split('')
@@ -19,12 +20,25 @@ var defangIPaddr = function(address) {
     return newArr.join('')
 }
 
+
+
 // 1431. Kids With the Greatest Number of Candies (easy)
 var kidsWithCandies = function(candies, extraCandies) {
     let newArr = []
     let maxCandies = Math.max(...candies)
     for (let i=0; i<candies.length; i++){
         newArr.push((candies[i]+extraCandies) >= maxCandies )
+    }
+    return newArr
+}
+
+
+
+// 1470. Shuffle the Array (easy)
+var shuffle = function(nums, n) {
+    let newArr = []
+    for (let i=0; i<(nums.length/2); i++){
+        newArr.push(nums[i], nums[i+n])
     }
     return newArr
 }
