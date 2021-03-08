@@ -42,3 +42,14 @@ var shuffle = function(nums, n) {
     }
     return newArr
 }
+
+
+
+// 1672. Richest Customer Wealth (easy)
+var maximumWealth = function(accounts) {
+    let newArr = []
+    for(let i=0; i<accounts.length; i++){
+        newArr.push(accounts[i].reduce((a,b)=>a+b))
+        }
+     return Math.max(...newArr)
+}
