@@ -53,3 +53,15 @@ var maximumWealth = function(accounts) {
         }
      return Math.max(...newArr)
 }
+
+
+// 1512. Number of Good Pairs
+var numIdenticalPairs = function(nums) { 
+    let sum = 0 
+    for (let i=0; i<nums.length; i++){
+        for (let j=i+1; j<nums.length; j++){
+            nums[i] === nums[j] ? sum++ : null
+        } 
+    } 
+    return sum
+}
