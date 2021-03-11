@@ -81,3 +81,18 @@ var numJewelsInStones = function(jewels, stones) {
     }
     return check
 }   
+
+
+// 1773. Count Items Matching a Rule
+var countMatches = function(items, ruleKey, ruleValue) {
+    let index, count = 0
+
+    ruleKey === "type" ? index=0 :
+        ruleKey === "color" ? index=1 :
+        ruleKey === "name" ? index=2 : null
+
+    for (let i=0; i<items.length; i++){
+        items[i][index] === ruleValue ? count++ : null
+    }
+    return count
+}
