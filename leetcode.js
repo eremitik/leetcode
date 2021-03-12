@@ -96,3 +96,12 @@ var countMatches = function(items, ruleKey, ruleValue) {
     }
     return count
 }
+
+
+// 1281. Subtract the Product and Sum of Digits of an Integer
+var subtractProductAndSum = function(n) {
+    let num = n.toString().split('').map(Number)
+    let prod = num.reduce((a,b)=>a*b)
+    let sum = num.reduce((c,d)=>c+d)
+    return prod - sum
+}
