@@ -105,3 +105,15 @@ var subtractProductAndSum = function(n) {
     let sum = num.reduce((c,d)=>c+d)
     return prod - sum
 }
+
+
+// 1678. Goal Parser Interpretation
+var interpret = function(command) {
+    let word = ''
+    for (let i=0; i<command.length; i++){
+        command.charAt(i) === 'G' ? word += 'G' :
+            (command.charAt(i) === "(" && command.charAt(i+1) === ")") ? word += 'o' :
+            (command.charAt(i) === "(" && command.charAt(i+1) === "a") ? word += 'al' : null
+    }
+    return word
+}
