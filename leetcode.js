@@ -127,3 +127,11 @@ var createTargetArray = function(nums, index) {
     }
     return newArr
 }
+
+
+// 1662. Check If Two String Arrays are Equivalent
+var arrayStringsAreEqual = function(word1, word2) {
+    let w1 = word1.reduce((a,b) => a+b)
+    let w2 = word2.reduce((c,d) => c+d)
+    return w1 === w2
+}
