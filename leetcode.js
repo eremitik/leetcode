@@ -135,3 +135,18 @@ var arrayStringsAreEqual = function(word1, word2) {
     let w2 = word2.reduce((c,d) => c+d)
     return w1 === w2
 }
+
+
+// 1365. How Many Numbers Are Smaller Than the Current Number
+var smallerNumbersThanCurrent = function(nums) {
+    let newArr = []
+    for (let i=0; i<nums.length; i++){
+            let count = 0
+        for (let j=0; j<nums.length; j++){
+            nums[i]>nums[j] ? count++ : null
+        }
+        newArr.push(count)
+    }
+    return newArr
+}
+
