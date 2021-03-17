@@ -150,3 +150,14 @@ var smallerNumbersThanCurrent = function(nums) {
     return newArr
 }
 
+
+// 1732. Find the Highest Altitude
+var largestAltitude = function(gain) {
+    let points = 0
+    let newArr = []
+    for (let i=0; i<gain.length+1; i++){
+        newArr.push(points)
+        points = points+gain[i]
+    }
+    return Math.max.apply(false, newArr)
+}
