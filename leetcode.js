@@ -161,3 +161,13 @@ var largestAltitude = function(gain) {
     }
     return Math.max.apply(false, newArr)
 }
+
+
+// 1295. Find Numbers with Even Number of Digits
+var findNumbers = function(nums) {
+    let count = 0
+    for (let i=0; i<nums.length; i++){
+        nums[i].toString().length % 2 === 0 ? count+=1 : null
+    }
+    return count
+}   
