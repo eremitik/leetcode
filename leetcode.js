@@ -177,3 +177,12 @@ var findNumbers = function(nums) {
 var toLowerCase = function(str) {
     return str.toLowerCase()
 }
+
+
+// 1880. Check if Word Equals Summation of Two Words
+const isSumEqual = (fw, sw, tw) => {
+  let foo = Number([...fw].map(v => v.charCodeAt() - 97).join(''))
+          + Number([...sw].map(v => v.charCodeAt() - 97).join(''))
+  let bar = Number([...tw].map(v => v.charCodeAt() - 97).join(''))
+  return foo === bar
+}
