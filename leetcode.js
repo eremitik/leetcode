@@ -32,7 +32,11 @@ var kidsWithCandies = function(candies, extraCandies) {
     return newArr
 }
 
-
+// DRY applied
+const isSumEqual = (fw, sw, tw) => {
+  const findNum = (x) => Number([...x].map(v => v.charCodeAt() - 97).join(''))
+  return findNum(fw) + findNum(sw) === findNum(tw)
+}
 
 // 1470. Shuffle the Array (easy)
 var shuffle = function(nums, n) {
