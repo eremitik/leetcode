@@ -32,11 +32,7 @@ var kidsWithCandies = function(candies, extraCandies) {
     return newArr
 }
 
-// DRY applied
-const isSumEqual = (fw, sw, tw) => {
-  const findNum = (x) => Number([...x].map(v => v.charCodeAt() - 97).join(''))
-  return findNum(fw) + findNum(sw) === findNum(tw)
-}
+
 
 // 1470. Shuffle the Array (easy)
 var shuffle = function(nums, n) {
@@ -87,6 +83,7 @@ var numJewelsInStones = function(jewels, stones) {
 }   
 
 
+
 // 1773. Count Items Matching a Rule
 var countMatches = function(items, ruleKey, ruleValue) {
     let index, count = 0
@@ -102,6 +99,7 @@ var countMatches = function(items, ruleKey, ruleValue) {
 }
 
 
+
 // 1281. Subtract the Product and Sum of Digits of an Integer
 var subtractProductAndSum = function(n) {
     let num = n.toString().split('').map(Number)
@@ -109,6 +107,7 @@ var subtractProductAndSum = function(n) {
     let sum = num.reduce((c,d)=>c+d)
     return prod - sum
 }
+
 
 
 // 1678. Goal Parser Interpretation
@@ -123,6 +122,7 @@ var interpret = function(command) {
 }
 
 
+
 // 1389. Create Target Array in the Given Order
 var createTargetArray = function(nums, index) {
     let newArr = []
@@ -133,12 +133,14 @@ var createTargetArray = function(nums, index) {
 }
 
 
+
 // 1662. Check If Two String Arrays are Equivalent
 var arrayStringsAreEqual = function(word1, word2) {
     let w1 = word1.reduce((a,b) => a+b)
     let w2 = word2.reduce((c,d) => c+d)
     return w1 === w2
 }
+
 
 
 // 1365. How Many Numbers Are Smaller Than the Current Number
@@ -155,6 +157,7 @@ var smallerNumbersThanCurrent = function(nums) {
 }
 
 
+
 // 1732. Find the Highest Altitude
 var largestAltitude = function(gain) {
     let points = 0
@@ -167,6 +170,7 @@ var largestAltitude = function(gain) {
 }
 
 
+
 // 1295. Find Numbers with Even Number of Digits
 var findNumbers = function(nums) {
     let count = 0
@@ -177,10 +181,12 @@ var findNumbers = function(nums) {
 }   
 
 
+
 // 709. To Lower Case
 var toLowerCase = function(str) {
     return str.toLowerCase()
 }
+
 
 
 // 1880. Check if Word Equals Summation of Two Words
@@ -189,4 +195,10 @@ const isSumEqual = (fw, sw, tw) => {
           + Number([...sw].map(v => v.charCodeAt() - 97).join(''))
   let bar = Number([...tw].map(v => v.charCodeAt() - 97).join(''))
   return foo === bar
+}
+
+// DRY applied
+const isSumEqual = (fw, sw, tw) => {
+  const findNum = (x) => Number([...x].map(v => v.charCodeAt() - 97).join(''))
+  return findNum(fw) + findNum(sw) === findNum(tw)
 }
