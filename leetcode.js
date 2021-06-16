@@ -202,3 +202,16 @@ const isSumEqual = (fw, sw, tw) => {
   const findNum = (x) => Number([...x].map(v => v.charCodeAt() - 97).join(''))
   return findNum(fw) + findNum(sw) === findNum(tw)
 }
+
+
+// 1528. Shuffle String
+const restoreString = (s, indices) => {
+  let word = ''
+  let sArr = s.split('')
+  for (let i=0; i<indices.length; i++) {
+    for (let j=0; j<indices.length; j++) {
+      i === indices[j] ? word += sArr[j] : null
+    }
+  }
+  return word
+}
