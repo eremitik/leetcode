@@ -215,3 +215,14 @@ const restoreString = (s, indices) => {
   }
   return word
 }
+
+
+// 1342. Number of Steps to Reduce a Number to Zero
+const numberOfSteps = (num) => {
+  let count = 0
+  const reduce = (n) => n === 0 
+    ? null : n%2===0 
+    ? (count++, reduce(n/2)) : (count++, reduce(n-1))
+  reduce(num)
+  return count
+}
